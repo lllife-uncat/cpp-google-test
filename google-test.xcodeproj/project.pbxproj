@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		57DC9AC71984111100F2C268 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9AC61984111100F2C268 /* main.cpp */; };
 		57DC9AC91984111100F2C268 /* google_test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57DC9AC81984111100F2C268 /* google_test.1 */; };
+		57DC9ADC1984158E00F2C268 /* gtest_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9ADA1984158E00F2C268 /* gtest_main.cc */; };
+		57DC9B0B19841C1300F2C268 /* get.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9B0919841C1300F2C268 /* get.cpp */; };
+		57DC9B0E19841DD200F2C268 /* sample4.cc in Sources */ = {isa = PBXBuildFile; fileRef = 57DC9B0C19841DD200F2C268 /* sample4.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,11 @@
 		57DC9AC31984111100F2C268 /* google-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "google-test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DC9AC61984111100F2C268 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		57DC9AC81984111100F2C268 /* google_test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = google_test.1; sourceTree = "<group>"; };
+		57DC9ADA1984158E00F2C268 /* gtest_main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gtest_main.cc; sourceTree = "<group>"; };
+		57DC9B0919841C1300F2C268 /* get.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = get.cpp; sourceTree = "<group>"; };
+		57DC9B0A19841C1300F2C268 /* get.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = get.h; sourceTree = "<group>"; };
+		57DC9B0C19841DD200F2C268 /* sample4.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sample4.cc; sourceTree = "<group>"; };
+		57DC9B0D19841DD200F2C268 /* sample4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sample4.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +68,31 @@
 		57DC9AC51984111100F2C268 /* google-test */ = {
 			isa = PBXGroup;
 			children = (
+				57DC9B0819841C1300F2C268 /* lib */,
+				57DC9AD81984157200F2C268 /* gtest */,
 				57DC9AC61984111100F2C268 /* main.cpp */,
 				57DC9AC81984111100F2C268 /* google_test.1 */,
 			);
 			path = "google-test";
+			sourceTree = "<group>";
+		};
+		57DC9AD81984157200F2C268 /* gtest */ = {
+			isa = PBXGroup;
+			children = (
+				57DC9ADA1984158E00F2C268 /* gtest_main.cc */,
+			);
+			path = gtest;
+			sourceTree = "<group>";
+		};
+		57DC9B0819841C1300F2C268 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				57DC9B0C19841DD200F2C268 /* sample4.cc */,
+				57DC9B0D19841DD200F2C268 /* sample4.h */,
+				57DC9B0919841C1300F2C268 /* get.cpp */,
+				57DC9B0A19841C1300F2C268 /* get.h */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DC9B0B19841C1300F2C268 /* get.cpp in Sources */,
+				57DC9ADC1984158E00F2C268 /* gtest_main.cc in Sources */,
 				57DC9AC71984111100F2C268 /* main.cpp in Sources */,
+				57DC9B0E19841DD200F2C268 /* sample4.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +230,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/wk/codes/google-test/gtest-1.7.0/include";
 			};
 			name = Debug;
 		};
