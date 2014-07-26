@@ -10,6 +10,12 @@
 #include "gtest/gtest.h"
 #include "get.h"
 #include "sample4.h"
+#include "db.h"
+
+TEST(MySql, Connect) {
+    int x = Connect();
+    EXPECT_EQ(0, x);
+}
 
 TEST(Counter, Increment) {
     Counter c;
